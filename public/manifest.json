@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "React-Chrome-Extension-Boilerplate",
+  "version": "1.0.0",
+  "description": "A simple chrome extension boilerplate.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "24": "icon.png",
+      "32": "icon.png"
+    },
+    "default_title": "React-Chrome-Extension-Boilerplate",
+    "default_popup": "src/popup/index.html"
+  },
+  "permissions": ["storage", "alarms"],
+  "options_page": "src/options/index.html",
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  }
+}
