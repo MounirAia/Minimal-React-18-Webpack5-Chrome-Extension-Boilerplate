@@ -15,12 +15,18 @@
       "32": "icon.png"
     },
     "default_title": "React-Chrome-Extension-Boilerplate",
-    "default_popup": "src/popup/index.html"
+    "default_popup": "popup.html"
   },
   "permissions": ["storage", "alarms"],
-  "options_page": "src/options/index.html",
+  "options_page": "options.html",
   "background": {
-    "service_worker": "src/background/background.js",
+    "service_worker": "background.js",
     "type": "module"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
 }
